@@ -13,86 +13,95 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "Loja")
-public class Loja {
+public class Loja
+{
 
 	@Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-	@Column (name ="id", nullable = false)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id", nullable = false)
 	private Long id;
-	
+
 	private String nome;
-	
+
 	private int numero_funcionarios;
-	
+
 	private int area;
-	
-    @ManyToOne
-    @JsonIgnore
-    @JoinColumn(name="andar_id", nullable=false)
-    private Andar andar;
+
+	@ManyToOne
+	@JsonIgnore
+	@JoinColumn(name = "andar_id", nullable = false)
+	private Andar andar;
 
 	/**
 	 * @return the nome
 	 */
-	public String getNome() {
+	public String getNome()
+	{
 		return nome;
 	}
 
 	/**
 	 * @param nome the nome to set
 	 */
-	public void setNome(String nome) {
+	public void setNome(String nome)
+	{
 		this.nome = nome;
 	}
 
 	/**
 	 * @return the numero_funcionarios
 	 */
-	public int getNumero_funcionarios() {
+	public int getNumero_funcionarios()
+	{
 		return numero_funcionarios;
 	}
 
 	/**
 	 * @param numero_funcionarios the numero_funcionarios to set
 	 */
-	public void setNumero_funcionarios(int numero_funcionarios) {
+	public void setNumero_funcionarios(int numero_funcionarios)
+	{
 		this.numero_funcionarios = numero_funcionarios;
 	}
 
 	/**
 	 * @return the area
 	 */
-	public int getArea() {
+	public int getArea()
+	{
 		return area;
 	}
 
 	/**
 	 * @param area the area to set
 	 */
-	public void setArea(int area) {
+	public void setArea(int area)
+	{
 		this.area = area;
 	}
 
 	/**
 	 * @return the andar
 	 */
-	public Andar getAndar() {
+	public Andar getAndar()
+	{
 		return andar;
 	}
 
 	/**
 	 * @param andar the andar to set
 	 */
-	public void setAndar(Andar andar) {
+	public void setAndar(Andar andar)
+	{
 		this.andar = andar;
 	}
 
 	/**
 	 * @return the id
 	 */
-	public Long getId() {
+	public Long getId()
+	{
 		return id;
 	}
-    
-    
+
 }
